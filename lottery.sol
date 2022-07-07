@@ -30,11 +30,11 @@ contract Lottery {
     
     
     /**
-     * @dev requires the deposit of 0.1 ether and if met pushes on address on list
+     * @dev requires the deposit of 1 ether and if met pushes on address on list
      */ 
     receive() external payable {
-        //require that the transaction value to the contract is 0.1 ether
-        require(msg.value == 0.1 ether , "Must send 0.1 ether amount");
+        //require that the transaction value to the contract is 1 ether
+        require(msg.value == 1 ether , "Must send 1 ether amount");
         
         //makes sure that the admin can not participate in lottery
         require(msg.sender != admin);
